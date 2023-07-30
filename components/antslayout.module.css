@@ -1,0 +1,13 @@
+.container {
+ 
+  padding: 0 1rem;
+  background-color: lightblue;
+  
+}
+
+.input {
+  width: 95%;
+  font-size: large;
+  padding: 4px;
+  margin-bottom: 1em;
+}

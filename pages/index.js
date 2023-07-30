@@ -1,17 +1,20 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import Antslayout from '../components/antslayout';
 
 export default function Home() {
   return (
+    <Antslayout>
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Learn  Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+           Hier kann Du einen neuen <Link href="/check">Eintrag erstellen</Link>
         </h1>
 
         <p className={styles.description}>
@@ -49,21 +52,12 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+    
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
-          flex: 1;
+         
+          flex: 3;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -111,5 +105,6 @@ export default function Home() {
         }
       `}</style>
     </div>
+    </Antslayout>
   )
 }
