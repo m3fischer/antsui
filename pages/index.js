@@ -8,7 +8,7 @@ export default function Home() {
     <Antslayout>
     <div className={styles.container}>
       <Head>
-        <title>Learn  Next App</title>
+        <title>Learn Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
