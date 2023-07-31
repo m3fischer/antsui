@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 
 import React from 'react';
 import Antslayout from '../components/antslayout';
+import ATable from '../components/antstable';
 
 let resultFromServer = []
 export default function ShowAllEntriesFromDynamoDB() {
@@ -48,12 +49,8 @@ export default function ShowAllEntriesFromDynamoDB() {
 //          console.log(result.data[i].Benutzer)    
 //        }
         resultFromServer = result.data.length
-        alert(`Anzahl Items in der DB: ${resultFromServer}`)
-        //alert(`Item: ID: ${firstitem["entry-id"]} ${firstitem["Benutzer"]} ${firstitem["PILZTIEFE"]}`)
-      }
-
-    let names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-    let persons = [{name:"manuel", nachname:"fischer"},{name:"Andi", nachname:"mueller"},{name:"ingo", nachname:"dabinge"}, ]
+        console.log(`${resultFromServer} Items received from DB`)
+        }
     
  
 
@@ -65,39 +62,9 @@ export default function ShowAllEntriesFromDynamoDB() {
             <form onSubmit={handleSubmit}>    
                 <button variant="contained" type="submit">Abfragen</button>
             </form>  
-            <p>{resultFromServer}</p>
+            <ATable name="die neue Tabelle" tabledata={entries}/>
+                     
             
-            
-            <table>
-              <tr>
-              {Object.keys(entries[0]).map(head => <th key={head}>{head}</th>)}
-
-              </tr>
-              
-                {entries.map (e => <tr key={e["entry-id"]}> {Object.values(e).map(item => <td>{item}</td>)}
-                
-                </tr>)}
-                
-            </table>
-
-            <ul>{entries.map(entry => <li key={entry["entry-id"]}>{entry["entry-id"]}</li>)}</ul>
-            {entries.map( entry =>  <div key={entry["entry-id"]} id={entry["entry-id"]}>   
-                                      <div>{entry.PILZTIEFE}</div>   
-                                      <div>{entry.PILZBREITE}</div>   
-                                      <div>{entry.WAS}</div>   
-
-                                      <div>{entry.PILZHOEHE}</div>   
-                                      <div>{entry.PILZ_im_ACRYLROHR}</div>   
-                                      <div>{entry.BEMERKUNG}</div>   
-
-
-                                    </div>)}
-            <ul>
-              {names.map((name) => (
-                <li key={name}>{name}</li>
-              ))}
-            </ul>
-            <div>{persons.map(n => <p key={n.name}>Vorname: {n.name} und Nachname: {n.nachname}</p>)}</div>
         </Antslayout>   
       )
 }

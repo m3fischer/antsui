@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../public/img/ants_nature_logo.png'
 
 export default function Antsheader({ children }) {
     return (
@@ -6,7 +8,9 @@ export default function Antsheader({ children }) {
       
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Antsnature</a>
+          <a className="navbar-brand" href="/"> 
+            <Image src={logo} height={75} alt="Antsnature"/> 
+          </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

@@ -51,35 +51,34 @@ export default function PageWithJSbasedForm() {
       alert(`Message from Server: ${result.data}`)
     }
 
+    function FormItem ({id, label}){
+      return (<>
+        <div className="input-group mb-3">
+          <div className="input-group-prepend" >
+            <span className="input-group-text" id="inputGroup-sizing-default" >{label}</span>
+          </div>
+          <input id={id} name={id} type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+      </>)
+    }
 
     return (
         // We pass the event to the handleSubmit() function on submit.
         <Antslayout>
             <h1>Eintrag erstellen</h1>
                         
-            <form onSubmit={handleSubmit}>            
-                <label htmlFor="PILZTIEFE">PILZTIEFE:</label>
-                <input className={styles.input} type="text" id="PILZTIEFE" name="PILZTIEFE" required minLength="1" maxLength="20" />
+            <form onSubmit={handleSubmit}>        
 
-                <label htmlFor="PILZBREITE">PILZBREITE:</label>
-                <input className={styles.input} type="text" id="PILZBREITE" name="PILZBREITE" />
-
-                <label htmlFor="WAS">WAS:</label>
-                <input className={styles.input} type="text" id="WAS" name="WAS" />
-
-                <label htmlFor="PILZHOEHE">PILZHOEHE: </label>
-                <input className={styles.input} type="text" id="PILZHOEHE" name="PILZHOEHE" />
-
-                <label htmlFor="PILZ_im_ACRYLROHR">PILZ_im_ACRYLROHR</label>
-                <input className={styles.input} type="text" id="PILZ_im_ACRYLROHR" name="PILZ_im_ACRYLROHR"/>
-
-                <label htmlFor="PILZ_im_ACRYLROHR_LÄNGE">PILZ_im_ACRYLROHR_LÄNGE:</label>
-                <input className={styles.input} type="text" id="PILZ_im_ACRYLROHR_LÄNGE" name="PILZ_im_ACRYLROHR_LÄNGE" />
-
-                <label htmlFor="BEMERKUNG">BEMERKUNG:</label>
-                <input className={styles.input} type="text" id="BEMERKUNG" name="BEMERKUNG" />       
                 
-                <button variant="contained" type="submit">Submit</button>
+                <FormItem id="PILZTIEFE" label="Pilztiefe"></FormItem>
+                <FormItem id="PILZBREITE" label="Pilzbreite"></FormItem>
+                <FormItem id="WAS" label="Was"></FormItem>
+                <FormItem id="PILZHOEHE" label="PILZHOEHE"></FormItem>
+                <FormItem id="PILZ_im_ACRYLROHR" label="Pilz im Acryl"></FormItem>
+                <FormItem id="PILZ_im_ACRYLROHR_LÄNGE" label="Länge des Pilz im Accryl"></FormItem>
+                <FormItem id="BEMERKUNG" label="Bemerkung"></FormItem>         
+                
+                <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>
             
             </form>   
 
