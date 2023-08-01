@@ -34,8 +34,8 @@ export default function ShowAllEntriesFromDynamoDB() {
         // Get the response data from server as JSON.
         // If server returns the name submitted, that means the form works.
         const result = await response.json()
-        console.log(`Empfagene Daten: ${result.data[1].Benutzer}` )
-        const firstitem = result.data[2]
+        //console.log(`Empfagene Daten: ${result.data[1].Benutzer}` )
+        //const firstitem = result.data[2]
         //alert(`Is this your full name: ${result.data.length}`)
 
         setUpdateTable(result.data)

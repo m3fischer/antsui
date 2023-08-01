@@ -13,42 +13,21 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-           Hier kann Du einen neuen <Link href="/check">Eintrag erstellen</Link>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <h1 className={styles.title}> Antsnature App (V0.1) </h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/addentryform" className={styles.card}>
+            <h3>Eintrag anlegen &rarr;</h3>
+            <p>Einen neuen Eintrag in der Datenbank ablegen.</p>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/showall" className={styles.card}>
+          <h3>Daten anzeigen &rarr;</h3>
+            <p>Alle Daten abfaragen</p>
+          
+          </Link>
+          
+          
         </div>
       </main>
 
