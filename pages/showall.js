@@ -11,11 +11,11 @@ import ATable from '../components/antstable';
 let resultFromServer = []
 export default function ShowAllEntriesFromDynamoDB() {
 
-    const [entries, setUpdateTable] = React.useState([{name: "test"}]);
+    const [entries, setUpdateTable] = React.useState([{name: "der innitiale wert der Tabelle"}]);
     const [header, setUpdateHeader] = React.useState([]);
     
     
-
+    
 
      // Bin ich hier, wurde OK gedrückt
      const handleSubmit = async (event) => {     

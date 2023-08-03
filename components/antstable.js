@@ -1,4 +1,5 @@
 import styles from './antstable.module.css'
+import {Utils} from '../utils/utils'
 
 let counter =0 // die anzhal der gezählten elemente
         
@@ -17,14 +18,22 @@ let counter =0 // die anzhal der gezählten elemente
         
             return <>
                 <table>
-                <tr>{Object.keys(tabledata[0]).map(head => <th key={head}>{head}</th>)}</tr>
-                {tabledata.map (e => 
-                    <tr 
-                        key={e["entry-id"]} 
-                        id={e["entry-id"]} 
-                        className={cssclass.get(e["entry-id"])}
-                    > 
-                        {Object.values(e).map(item => <td>{item}</td>)}</tr>)}    
+                    <thead>
+                        <tr>{Object.keys(tabledata[0]).map(head => <th /*key={head}*/ id={head}>{head}</th>)}</tr>
+                    </thead>
+                    <tbody>
+                        {tabledata.map (e => 
+                            <tr 
+                                //key={e["entry-id"]} 
+                                id={e["entry-id"]} 
+                                className={cssclass.get(e["entry-id"])}
+                            > 
+                                {Object.values(e).map(item => 
+                                <td 
+                                    //key={Utils.create_entry_id("tdkey")}
+                                    id={Utils.create_entry_id("tdid")}
+                                >{item}</td>)}</tr>)}
+                    </tbody>
                 </table>
             </>
             // the variable is defined

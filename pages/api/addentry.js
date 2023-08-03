@@ -13,9 +13,8 @@ export default async function handler(req, res) {
     // in the command line where next.js app is running.
     console.log('body: ', body)
    
-    // Guard clause checks for first and last name,
-    // and returns early if they are not found
-    if (!body.PILZTIEFE || !body.PILZBREITE) {
+    //Hier könnte geprueft werden ob bestimmte aramter gesetzt wurden.
+    /*if (!body.PILZTIEFE || !body.PILZBREITE) {
       // Sends a HTTP bad request error code
       console.log ("ABBRUCH KEINE DATEN GESCHRIEBEN")
       return res.status(400).json({ data: 'PILZTIEFE oder PILZBREITE fehlen' })
@@ -28,7 +27,12 @@ export default async function handler(req, res) {
         console.log ("response")
         console.log (response)
         res.status(200).json({ data: `HTTP Status: ${response.$metadata.httpStatusCode}` })
-    }
+    }*/
+
+    let response = await writeToDynamoDB(req)
+        console.log ("response")
+        console.log (response)
+        res.status(200).json({ data: `HTTP Status: ${response.$metadata.httpStatusCode}` })
   }
 
 

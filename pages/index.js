@@ -21,6 +21,12 @@ export default function Home() {
             <p>Einen neuen Eintrag in der Datenbank ablegen.</p>
           </Link>
 
+          <Link href="/addentryfuetterung" className={styles.card}>
+            <h3>Tägliche Fütterung &rarr;</h3>
+            <p>Einen neuen Eintrag in der Datenbank ablegen.</p>
+          </Link>
+
+
           <Link href="/showall" className={styles.card}>
           <h3>Daten anzeigen &rarr;</h3>
             <p>Alle Daten abfaragen</p>
@@ -87,3 +93,5 @@ export default function Home() {
     </Antslayout>
   )
 }
+
+
