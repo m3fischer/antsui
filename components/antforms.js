@@ -5,7 +5,7 @@ export default function Antform(){
 
 export function AntItem({id, label}) {
     return (<>
-        <div className="input-group mb-3">
+        <div id={"div_" + id} className="input-group mb-3">
           <div className="input-group-prepend" >
             <span className="input-group-text" id="inputGroup-sizing-default" >{label}</span>
           </div>

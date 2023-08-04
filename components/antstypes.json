@@ -1,18 +1,20 @@
 {
     "dailyfeeding": {
         "descripton": "Hier kann das Formular weiter beschriebeb werden",
-        "q1": {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert"},
-        "q2": {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1},
-        "q3": {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Initialwert"},
-        "q4": {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert"},
-        "q5": {"id":"BLUETEN_ART", "label":"welche Art von Blüten", "initvalue":"Initialwert"},
-        "q6": {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"Initialwert"},
-        "q7": {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"Initialwert"},
-        "q8": {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"Initialwert"},
-        "q9": {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Initialwert"},
-        "q10": {"id":"PILZBECKEN_TEMPERATUR","label":"Temperatur im Pilzbecken", "initvalue":"Initialwert"},
-        "q11": {"id":"PILZBECKEN_LUFTFEUCHTE", "label":"Luftfeuchtigkeit im Pilzbecken", "initvalue":"Initialwert"},
-        "q12": {"id":"PILZBECKEN_PHWERT","label":"ph-Wert vom Pilz/Boden", "initvalue":"Initialwert"}
+        "questions": [
+            {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert"},
+            {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1},
+            {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Initialwert"},
+            {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert"},
+            {"id":"BLUETEN_ART", "label":"welche Art von Blüten", "initvalue":"Initialwert"},
+            {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"Initialwert"},
+            {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"Initialwert"},
+            {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"Initialwert"},
+            {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Initialwert"},
+            {"id":"PILZBECKEN_TEMPERATUR","label":"Temperatur im Pilzbecken", "initvalue":"Initialwert"},
+            {"id":"PILZBECKEN_LUFTFEUCHTE", "label":"Luftfeuchtigkeit im Pilzbecken", "initvalue":"Initialwert"},
+            {"id":"PILZBECKEN_PHWERT","label":"ph-Wert vom Pilz/Boden", "initvalue":"Initialwert"}
+        ]
     },
 
     "pilzentwicklung":{
