@@ -8,8 +8,10 @@ const client = new DynamoDBClient({ credentials: fromIni({ profile: "manuel-ants
   const docClient = DynamoDBDocumentClient.from(client);
   const input = { TableName: "AntscareDB"}
   const command = new Scan(input);
+  console.log("DATEN abrufen")
+  
   const response = await client.send(command);
-
+  
   //console.log(response.Items)
   //res.send( response.Items);
 //  res.status(200).json({ data: `${response.Items}` })

@@ -1,5 +1,6 @@
 {
     "dailyfeeding": {
+        "name":"dailyfeeding",
         "descripton": "Hier kann das Formular weiter beschriebeb werden",
         "questions": [
             {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert"},
@@ -18,10 +19,13 @@
     },
 
     "pilzentwicklung":{
+        "name":"pilzentwicklung",
         "descripton":"",
-        "q1":{"label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
-        "q2":{"label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
-        "q3":{"label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
-        "q4":{"label":"Bemerkung", "description":"", "initvalue":"Initialwert"}
+        "questions": [
+            {"id": "PILZ_BREITE", "label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
+            {"id": "PILZ_TIEFE", "label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
+            {"id": "PILZ_HOEHE", "label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
+            {"id": "PILZ_BEMERKUNG", "label":"Bemerkung", "description":"", "initvalue":"Initialwert"}
+        ]
     }
 }

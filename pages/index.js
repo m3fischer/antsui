@@ -16,13 +16,14 @@ export default function Home() {
         <h1 className={styles.title}> Antsnature App (V0.1) </h1>
 
         <div className={styles.grid}>
-          <Link href="/addentryform" className={styles.card}>
-            <h3>Eintrag anlegen &rarr;</h3>
+          
+          <Link href="/addentryfuetterung" className={styles.card}>
+            <h3>Tägliche Fütterung &rarr;</h3>
             <p>Einen neuen Eintrag in der Datenbank ablegen.</p>
           </Link>
 
-          <Link href="/addentryfuetterung" className={styles.card}>
-            <h3>Tägliche Fütterung &rarr;</h3>
+          <Link href="/addentrypilzentwicklung" className={styles.card}>
+            <h3>Pilzbeobachtung &rarr;</h3>
             <p>Einen neuen Eintrag in der Datenbank ablegen.</p>
           </Link>
 

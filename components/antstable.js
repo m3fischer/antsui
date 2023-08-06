@@ -19,7 +19,7 @@ let counter =0 // die anzhal der gezählten elemente
             return <>
                 <table>
                     <thead>
-                        <tr>{Object.keys(tabledata[0]).map(head => <th /*key={head}*/ id={head}>{head}</th>)}</tr>
+                        <tr>{Object.keys(tabledata[0]).map(head => <th key={head} id={head}>{head}</th>)}</tr>
                     </thead>
                     <tbody>
                         {tabledata.map (e => 
@@ -38,5 +38,5 @@ let counter =0 // die anzhal der gezählten elemente
             </>
             // the variable is defined
         }
-        else { return <></>}
+        else { console.log("ATable Table Data is empty"); return <></>}
     }

@@ -21,8 +21,13 @@ export default function Antsheader({ children }) {
               </li>
               
               <li className="nav-item">                
-                <Link className='nav-link' href="/addentryform">Eintrag erstellen</Link>
+                <Link className='nav-link' href="/addentryfuetterung">Fütterung eintragen</Link>
               </li>
+
+              <li className="nav-item">                
+                <Link className='nav-link' href="/addentrypilzentwicklung">Pilzbeobachtung eintragen</Link>
+              </li>
+
 
               <li className="nav-item">                
                 <Link className='nav-link' href="/showall">Alle Daten anzeigen</Link>

@@ -8,7 +8,7 @@ import styles from '../components/antslayout.module.css';
 import { Utils } from '../utils/utils';
 
 //Fuer weniger Schreibarbeit
-let f5g = antforms.dailyfeeding
+let p13g = antforms.pilzentwicklung
 
 
 async function onSendData(event){
@@ -18,27 +18,25 @@ async function onSendData(event){
     const data = {} // Zunächst leeres JSON Objekt anlegen
 
     // Es wird gespeichert welche Informationen gespeichert werden
-    data["FORM_TYPE"] = f5g.name
+    data["FORM_TYPE"] = p13g.name
 
     //Für jedes Formelement wird ein Key-Value-Paar erstellt und in dem zuvor angelegtem JSON-Objekt gespeichert
-    f5g.questions.forEach(item => {data[item.id] = event.target[item.id].value})  
+    p13g.questions.forEach(item => {data[item.id] = event.target[item.id].value})  
     
     console.log(data)
     Utils.send_data_to_backend(data)
 
 }
 
-export default  function addEntryFuetterung () {
+export default  function addEntryPilzentwicklung () {
 
-   
     return ( 
         <Antslayout>          
-            <h1>Tägliche Futterabfrage</h1>
-            <p>Trage hier die tägliche Füterung ein</p>
-            <h2>Was hast du gefüttert</h2>
-
+            <h1>Pilzentwicklung</h1>
+            <p>Trage hier die tägliche Beobachtung ein</p>
+            
            <form onSubmit={onSendData}>
-                {f5g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label}></AntItem>})}
+                {p13g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label}></AntItem>})}
                 <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>            
             </form>
 
