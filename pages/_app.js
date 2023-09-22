@@ -15,5 +15,5 @@ export default function MyApp({ Component, pageProps }) {
                 crossorigin="anonymous">        
         </Script>
         <Component {...pageProps} /></>)
-  }
+}
   

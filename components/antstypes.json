@@ -3,7 +3,7 @@
         "name":"dailyfeeding",
         "descripton": "Hier kann das Formular weiter beschriebeb werden",
         "questions": [
-            {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert"},
+            {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert", "htmltype":"checkbox"},
             {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1},
             {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Initialwert"},
             {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert"},
