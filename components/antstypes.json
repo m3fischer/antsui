@@ -3,18 +3,18 @@
         "name":"dailyfeeding",
         "descripton": "Hier kann das Formular weiter beschriebeb werden",
         "questions": [
-            {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Initialwert", "htmltype":"checkbox"},
-            {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1},
-            {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Initialwert"},
-            {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert"},
-            {"id":"BLUETEN_ART", "label":"welche Art von Blüten", "initvalue":"Initialwert"},
-            {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"Initialwert"},
-            {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"Initialwert"},
-            {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"Initialwert"},
-            {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Initialwert"},
-            {"id":"PILZBECKEN_TEMPERATUR","label":"Temperatur im Pilzbecken", "initvalue":"Initialwert"},
-            {"id":"PILZBECKEN_LUFTFEUCHTE", "label":"Luftfeuchtigkeit im Pilzbecken", "initvalue":"Initialwert"},
-            {"id":"PILZBECKEN_PHWERT","label":"ph-Wert vom Pilz/Boden", "initvalue":"Initialwert"}
+            {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Nichts#Ein wenig#Viel", "htmltype":"radio"},
+            {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1, "htmltype":"text"},
+            {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Brombeerblätter#Rosenblätter#Lindenblätter#Fliederblätter#Wilder Wein#Robienenblätter", "htmltype":"checkbox"},
+            {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id":"BLUETEN_ART", "label":"welche Art von Blüten", "initvalue":"Rosenblüten#Fliederblüten#Forsytzie#Sonstiges", "htmltype":"checkbox"},
+            {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"0,25#0,5#0,75#1#mehr", "htmltype":"radio"},
+            {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"0,5#1#2#mehr", "htmltype":"checkbox"},
+            {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"1 TL Haferflocken (fein oder kernig)#1 TL Mandelblätter#1TL Cornflakes#Sonstiges", "htmltype":"checkbox"},
+            {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Problem mit der LF (Dann bitte die Werte für 3-4 Tage unten eintragen)#Pilzaufbau im Acrylrohr#Problem mit der T (Dann bitte die Werte für 3-4 Tage unten eintragen)#Änderung in der Aktivität der Ameisen#LF im Pilzbecken ok, aber Substrat trocken (Dann bitte befeuchten)#Blätter werden zwischengelagert und nicht verwertet#Acrylrohr zum Pilzbecken wird verschlossen#Ausbruch#Pilz wird abgedeckt#Sonstiges:", "htmltype":"checkbox"},
+            {"id":"PILZBECKEN_TEMPERATUR","label":"Temperatur im Pilzbecken", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id":"PILZBECKEN_LUFTFEUCHTE", "label":"Luftfeuchtigkeit im Pilzbecken", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id":"PILZBECKEN_PHWERT","label":"ph-Wert vom Pilz/Boden", "initvalue":"0-4 (basisch)#5-9 (neutral)#10-14(alkalisch)", "htmltype":"radio"}
         ]
     },
 
