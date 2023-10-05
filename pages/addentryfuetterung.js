@@ -15,46 +15,14 @@ async function onSendData(event){
     // Stop the form from submitting and refreshing the page.
     event.preventDefault()
    
-    const data = {} // Zunächst leeres JSON Objekt anlegen
-
-    // Es wird gespeichert welche Informationen gespeichert werden
-    data["FORM_TYPE"] = f5g.name
-
-    //Für jedes Formelement wird ein Key-Value-Paar erstellt und in dem zuvor angelegtem JSON-Objekt gespeichert
-    //console.log(event.target)
-    f5g.questions.forEach(item => { 
-        if (item.htmltype=="checkbox"){
-            let radiovalues = item.initvalue.split("#")
-            radiovalues.map(checkvalue => {
-                if(event.target[item.id+"_" +checkvalue ].checked){
-                    // Bei einer Checkbox sollen nur die ausgewählten Elemente gespeichert werden
-                    if(data[item.id] == undefined){
-                       data[item.id] = event.target[item.id+"_" +checkvalue ].value} // Das erste Element kann direkt gespeichert werden
-                    else{
-                        data[item.id] =data[item.id]+"#"+ event.target[item.id+"_" +checkvalue ].value // Bei allen weiteren Elementen müssen die vorherigen Werten mit dem Trennzeichn getrennt werden
-                    }
-                }
-                else{
-                    //Dieser Wert muss nicht gepsiehcert werden
-                }
-                })
-            
-                
-        }
-        else if (item.htmltype=="checkbox"){}
-        else{
-            data[item.id] = event.target[item.id].value
-        }
-        })
-
+    // Anhand der Formularkonfiguration wird das Event ausgewertet und Daten extrahiert. 
+    // Die Eingebane des Nutzers werden in der lokalen Variablen 'data' gespeichert 
+    const data = Utils.extract_data_from_target(event, f5g)
     
     console.log("FUNCTION onSendData IN addentryfuertterung")
     console.log(data)
-    //Utils.send_data_to_backend(data)
-
+    Utils.send_data_to_backend(data)
 }
-
-
 
 export default  function addEntryFuetterung () {
 

@@ -48,6 +48,40 @@ const Utils = {
       const response = await docClient.send(command);
       return response
     },
+    
+    extract_data_from_target(event, formElements){
+      const data = {} // Zunächst leeres JSON Objekt anlegen
+      
+      // Es wird gespeichert welche Informationen gespeichert werden
+      data["FORM_TYPE"] = formElements.name
+
+      formElements.questions.forEach(item => {
+          //Bei der Auswertung dürfen bei einer Checkox nur die ausgwählten Elemente gespeichert werden
+          if (item.htmltype == "checkbox") {
+              //Anhand der initial-Werte wird ein Array aller möglichre Werte gesucht
+              let possibleValuesList = item.initvalue.split("#");
+              possibleValuesList.map(checkvalue => {
+                  if (event.target[item.id + "_" + checkvalue].checked) {
+                      // Bei einer Checkbox sollen nur die ausgewählten Elemente gespeichert werden
+                      if (data[item.id] == undefined) {
+                          data[item.id] = event.target[item.id + "_" + checkvalue].value;
+                      } // Das erste Element kann direkt gespeichert werden
+                      else {
+                          data[item.id] = data[item.id] + "#" + event.target[item.id + "_" + checkvalue].value; // Bei allen weiteren Elementen müssen die vorherigen Werten mit dem Trennzeichn getrennt werden
+                      }
+                  }
+                  else {
+                      //Dieser Wert muss nicht gepsichert werden
+                  }
+              });
+          }
+          else if (item.htmltype == "checkbox") { }
+          else {
+              data[item.id] = event.target[item.id].value;
+          }
+      });
+      return data
+    },
 
     send_data_to_backend: async function (data, endpoint = '/api/addentry'){
       // Send the data to the server in JSON format.
