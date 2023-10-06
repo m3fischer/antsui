@@ -44,6 +44,7 @@ export default async function handler(req, res) {
     let theItem = {}
     theItem["entry-id"] = new_id
     theItem["Benutzer"] = "der neue Benutzer"
+    theItem["Timestamp"] = Utils.get_timestamp();
 
     for (let key in req.body){
 

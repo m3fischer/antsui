@@ -16,6 +16,8 @@ const Utils = {
       },
     
 
+      ///ACHTUNG Diese Funktion wird derzeit nicht verwendet.
+      // Das Schreiben in die Datenbank erfolgt in pages\api\addentry.js
     write_to_DynamoDB: async function (req){
       const client = new DynamoDBClient({ credentials: fromIni({ profile: "manuel-antsapp" }), region: "eu-central-1",});
       const docClient = DynamoDBDocumentClient.from(client);
@@ -49,7 +51,7 @@ const Utils = {
       return response
     },
     
-    extract_data_from_target(event, formElements){
+    extract_data_from_target: function(event, formElements){
       const data = {} // Zunächst leeres JSON Objekt anlegen
       
       // Es wird gespeichert welche Informationen gespeichert werden
@@ -81,6 +83,21 @@ const Utils = {
           }
       });
       return data
+    },
+
+    //Liefert die aktuelle Zeit im Format DD.MM.YYYY - hh:mm:ss
+    get_timestamp: function (){
+      let d = new Date()
+      // Alle Zeiten werden zweistellig dargestellt
+      let DD = d.getDate().toString().padStart(2,0);
+      let MM = (d.getMonth()+1).toString().padStart(2,0);
+      let YYYY = d.getFullYear().toString()
+      let hh = d.getHours().toString().padStart(2,0);
+      let mm = d.getMinutes().toString().padStart(2,0);
+      let ss = d.getSeconds().toString().padStart(2,0);
+
+      let curTime = DD + "." + MM + "." + YYYY + " - "+ hh + ":" + mm + ":" + ss
+      return curTime
     },
 
     send_data_to_backend: async function (data, endpoint = '/api/addentry'){
