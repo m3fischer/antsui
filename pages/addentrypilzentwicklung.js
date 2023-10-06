@@ -15,14 +15,11 @@ async function onSendData(event){
     // Stop the form from submitting and refreshing the page.
     event.preventDefault()
    
-    const data = {} // Zunächst leeres JSON Objekt anlegen
-
-    // Es wird gespeichert welche Informationen gespeichert werden
-    data["FORM_TYPE"] = p13g.name
-
-    //Für jedes Formelement wird ein Key-Value-Paar erstellt und in dem zuvor angelegtem JSON-Objekt gespeichert
-    p13g.questions.forEach(item => {data[item.id] = event.target[item.id].value})  
+    // Anhand der Formularkonfiguration wird das Event ausgewertet und Daten extrahiert. 
+    // Die Eingebane des Nutzers werden in der lokalen Variablen 'data' gespeichert 
+    const data = Utils.extract_data_from_target(event, p13g)
     
+    console.log("FUNCTION onSendData IN addentrypilzentwicklung")
     console.log(data)
     Utils.send_data_to_backend(data)
 
@@ -35,10 +32,12 @@ export default  function addEntryPilzentwicklung () {
             <h1>Pilzentwicklung</h1>
             <p>Trage hier die tägliche Beobachtung ein</p>
             
-           <form onSubmit={onSendData} >
+           <form key="Add_Pilzentwicklung" onSubmit={onSendData} >
                 {p13g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label} htmltype={item.htmltype} value={item.initvalue}></AntItem>})}
                 <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>            
             </form>
+
+            
 
 
         </Antslayout>

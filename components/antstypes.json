@@ -22,9 +22,10 @@
         "name":"pilzentwicklung",
         "descripton":"",
         "questions": [
-            {"id": "PILZ_BREITE", "label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
-            {"id": "PILZ_TIEFE", "label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
-            {"id": "PILZ_HOEHE", "label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert"},
+            {"id": "PILZ_BREITE", "label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id": "PILZ_TIEFE", "label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id": "PILZ_HOEHE", "label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id": "PILZ_GESUNDHEIT_SCHAETZUNG", "label":"Gesundheit des Pilzes", "description":"Wieviel Prozent vom Pilz sind deiner Schätzung nach gesund?", "initvalue":"80-100%#60-80%#<50%", "htmltype":"radio"},
             {"id": "PILZ_BEMERKUNG", "label":"Bemerkung", "description":"", "initvalue":"Initialwert"}
         ]
     }
