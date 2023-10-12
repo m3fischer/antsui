@@ -1,18 +1,33 @@
+import { AntCheckBox, AntRadioButton } from './AntCheckSelect'
 import styles from './antforms.module.css'
 
 export default function Antform(){
     return <></>
 }
 
-export function AntItem({id, label, htmltype, value}) {
+export function AntItem({id, label, htmltype, value, img}) {
 
   let htmlStructure // der Rückgabewert
+  let props = {}; // Ein leeres JSON-Objekt fuer alle Properties
+
+  //Sofern vorhanden werden die Properties gesetzt
+  if (id != undefined){  props.id = id;}
+  if (label != undefined) {props.label = label;}
+  if (htmltype != undefined) {props.htmltype = htmltype;}
+  if (value != undefined) { props.value = value;}
+  if (img != undefined) { props.img = img;}
+
+  //Unterscheidung je nach HTML Typ. 
+  // Möglich sind: radio, checkbox oder text
   switch (htmltype){
 
     case "radio":
+      htmlStructure = AntRadioButton (props)
+      break
+
     case "checkbox":
-      htmlStructure = getRadioButtonStructure (id, label, value, htmltype)
-    break
+      htmlStructure = AntCheckBox (props)
+      break
 
     default: // Liefert die Default Struktur, d.h. ein Textfeld
       htmlStructure = getDefaultHTMLStructure(id, label)

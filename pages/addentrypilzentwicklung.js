@@ -1,14 +1,14 @@
 import Antslayout from '../components/antslayout';
 import React from 'react';
 
-import antforms from '../components/antstypes.json'
+import anttypes from '../components/antstypes.json'
 import {AntItem} from '../components/antforms'
 
 import styles from '../components/antslayout.module.css';
 import { Utils } from '../utils/utils';
 
 //Fuer weniger Schreibarbeit p13g => PilzentwicklunG
-let p13g = antforms.pilzentwicklung
+let p13g = anttypes.pilzentwicklung
 
 
 async function onSendData(event){
@@ -32,7 +32,7 @@ export default  function addEntryPilzentwicklung () {
             <h1>Pilzentwicklung</h1>
             <p>Trage hier die tägliche Beobachtung ein</p>
             
-           <form key="Add_Pilzentwicklung" onSubmit={onSendData} >
+           <form key="Add_Pilzentwicklung" onSubmit={onSendData} className="d-grid gap-5">
                 {p13g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label} htmltype={item.htmltype} value={item.initvalue}></AntItem>})}
                 <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>            
             </form>

@@ -11,7 +11,7 @@ export default function Home() {
         <title>Antsnature App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
       <main>
         <h1 className={styles.title}> Antsnature App (V0.1) </h1>
 
