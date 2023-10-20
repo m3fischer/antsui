@@ -1,3 +1,5 @@
+import styles from './AntCheckSelect.module.css'
+
 export function AntCheckBox (props){
     return AntCheckSelect (props, "checkbox")
 }
@@ -24,7 +26,8 @@ function AntCheckSelect (props, htmltype) {
     let label = props.label
 
     return (
-        <div key={"div_" + id} id={"div_" + id}>
+        <div key={"div_" + id} id={"div_" + id} className="container">
+          {props.img && <img id={"img_" + id} src={props.img}className='img-thumbnail rounded float-left d-block' ></img>}
           <div className="input-group-prepend" >
             <span className="input-group-text" id="inputGroup-sizing-default" >{label}</span>
           </div>

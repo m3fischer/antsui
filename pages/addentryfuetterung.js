@@ -28,14 +28,26 @@ export default  function addEntryFuetterung () {
 
    
     return ( 
-        <Antslayout>          
+        <Antslayout className="">          
             <h1 key="h1-element">Tägliche Futterabfrage</h1>
             <p key="p-element"> Trage hier die tägliche Füterung ein</p>
             <h2 key="h2-element">Was hast du gefüttert</h2>
 
-           <form key="form_Add_Fuetterung" onSubmit={onSendData} className="d-grid gap-5">
-                                           
-                {f5g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label} htmltype={item.htmltype} value={item.initvalue}></AntItem>})}
+           <form key="form_Add_Fuetterung" onSubmit={onSendData} className="d-grid gap-5">                           
+                {//START JavaScript
+                    f5g.questions.map(item => 
+                    {
+                        return <AntItem 
+                                    key={item.id} 
+                                    id={item.id} 
+                                    label={item.label} 
+                                    htmltype={item.htmltype} 
+                                    value={item.initvalue}
+                                    img = {item.image} >
+                            </AntItem>
+                    })
+                }
+                
                 <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>            
             </form>
 

@@ -1,17 +1,17 @@
 {
     "dailyfeeding": {
         "name":"dailyfeeding",
-        "descripton": "Hier kann das Formular weiter beschriebeb werden",
+        "descripton": "Hier kann das Formular weiter beschrieben werden",
         "questions": [
             {"id":"VORTAG_REST", "label":"Ist vom Vortag etwas übrig geblieben?", "initvalue":"Nichts#Ein wenig#Viel", "htmltype":"radio"},
-            {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1, "htmltype":"text"},
+            {"id":"BLAETTER_ANZAHL", "label":"Wieviele Blätter werden angeboten?", "initvalue":-1, "htmltype":"text", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Blaetter_App.jpg"},
             {"id":"BLAETTER_ART", "label":"welche Art von Blättern ?", "initvalue":"Brombeerblätter#Rosenblätter#Lindenblätter#Fliederblätter#Wilder Wein#Robienenblätter", "htmltype":"checkbox"},
-            {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert", "htmltype":"text"},
+            {"id":"BLUETEN_ANZAHL", "label":"Wieviele Blüten werden angeboten?", "initvalue":"Initialwert", "htmltype":"text", "iamge":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Bluete_App.jpg"},
             {"id":"BLUETEN_ART", "label":"welche Art von Blüten", "initvalue":"Rosenblüten#Fliederblüten#Forsytzie#Sonstiges", "htmltype":"checkbox"},
-            {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"0,25#0,5#0,75#1#mehr", "htmltype":"radio"},
-            {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"0,5#1#2#mehr", "htmltype":"checkbox"},
-            {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"1 TL Haferflocken (fein oder kernig)#1 TL Mandelblätter#1TL Cornflakes#Sonstiges", "htmltype":"checkbox"},
-            {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Problem mit der LF (Dann bitte die Werte für 3-4 Tage unten eintragen)#Pilzaufbau im Acrylrohr#Problem mit der T (Dann bitte die Werte für 3-4 Tage unten eintragen)#Änderung in der Aktivität der Ameisen#LF im Pilzbecken ok, aber Substrat trocken (Dann bitte befeuchten)#Blätter werden zwischengelagert und nicht verwertet#Acrylrohr zum Pilzbecken wird verschlossen#Ausbruch#Pilz wird abgedeckt#Sonstiges:", "htmltype":"checkbox"},
+            {"id":"ANGEBOT_APFEL", "label":"Wurde Apfel angeboten?", "initvalue":"0,25#0,5#0,75#1#mehr", "htmltype":"radio", "iamge":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Apfel_App.jpg"},
+            {"id":"ANGEBOT_WEINTRAUBE","label":"Wurde Weintraube angeboten?", "initvalue":"0,5#1#2#mehr", "htmltype":"checkbox", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Weintraube_App.jpg"},
+            {"id":"ANGEBOT_TROCKENFUTTER","label":"Wurde Trockenfutter angeboten?", "initvalue":"1 TL Haferflocken (fein oder kernig)#1 TL Mandelblätter#1TL Cornflakes#Sonstiges", "htmltype":"checkbox", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Zusatzfutter_App.jpg"},
+            {"id":"BEMERKUNG","label":"Bemerkungen - helfen bei der Interpretation", "initvalue":"Problem mit der LF (Dann bitte die Werte für 3-4 Tage unten eintragen)#Pilzaufbau im Acrylrohr#Problem mit der T (Dann bitte die Werte für 3-4 Tage unten eintragen)#Änderung in der Aktivität der Ameisen#LF im Pilzbecken ok, aber Substrat trocken (Dann bitte befeuchten)#Blätter werden zwischengelagert und nicht verwertet#Acrylrohr zum Pilzbecken wird verschlossen#Ausbruch#Pilz wird abgedeckt#Sonstiges:", "htmltype":"checkbox", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Bemerkungen_App.jpg"},
             {"id":"PILZBECKEN_TEMPERATUR","label":"Temperatur im Pilzbecken", "initvalue":"Initialwert", "htmltype":"text"},
             {"id":"PILZBECKEN_LUFTFEUCHTE", "label":"Luftfeuchtigkeit im Pilzbecken", "initvalue":"Initialwert", "htmltype":"text"},
             {"id":"PILZBECKEN_PHWERT","label":"ph-Wert vom Pilz/Boden", "initvalue":"0-4 (basisch)#5-9 (neutral)#10-14(alkalisch)", "htmltype":"radio"}
@@ -22,10 +22,10 @@
         "name":"pilzentwicklung",
         "descripton":"",
         "questions": [
-            {"id": "PILZ_BREITE", "label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text", "image":"https://antsacademy.antsnature.de/wp-content/uploads/elementor/thumbs/Antucation-eckig-pryauk104k35oq5hwtq5sgwxua51th64ujiyxbi8k0.png"},
-            {"id": "PILZ_TIEFE", "label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text"},
-            {"id": "PILZ_HOEHE", "label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text"},
-            {"id": "PILZ_GESUNDHEIT_SCHAETZUNG", "label":"Gesundheit des Pilzes", "description":"Wieviel Prozent vom Pilz sind deiner Schätzung nach gesund?", "initvalue":"80-100%#60-80%#<50%", "htmltype":"radio"},
+            {"id": "PILZ_BREITE", "label":"Breite des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Breite_App.jpg"},
+            {"id": "PILZ_TIEFE", "label":"Tiefe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Tiefe_App.jpg"},
+            {"id": "PILZ_HOEHE", "label":"Höhe des Pilzes", "description":"Eingetragen wird immer der größte gemessene Wert.", "initvalue":"Initialwert", "htmltype":"text", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/Hoehe_App.jpg"},
+            {"id": "PILZ_GESUNDHEIT_SCHAETZUNG", "label":"Gesundheit des Pilzes", "description":"Wieviel Prozent vom Pilz sind deiner Schätzung nach gesund?", "initvalue":"80-100%#60-80%#<50%", "htmltype":"radio", "image":"https://antsacademy.antsnature.de/wp-content/uploads/2023/10/gesundungesund_NEU.jpg"},
             {"id": "PILZ_BEMERKUNG", "label":"Bemerkung", "description":"", "initvalue":"Initialwert"}
         ]
     }

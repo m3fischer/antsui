@@ -30,16 +30,24 @@ export function AntItem({id, label, htmltype, value, img}) {
       break
 
     default: // Liefert die Default Struktur, d.h. ein Textfeld
-      htmlStructure = getDefaultHTMLStructure(id, label)
+      htmlStructure = getDefaultHTMLStructure(props)
 
   }
     
     return htmlStructure 
 }
 
-function getDefaultHTMLStructure(id, label){
+function getDefaultHTMLStructure(props){
+  let id = props.id
+  let label = props.label
+
   return (<>
-    <div key={"div_" + id} id={"div_" + id} className="">
+    <div key={"div_" + id} id={"div_" + id} className="container">
+      
+    {// Folgende Struktur liefert das Img-Tag zurück WENN der Wert props.img existiert
+      props.img && <img id={"img_" + id} src={props.img} className="img-thumbnail rounded float-left d-block" ></img>
+    }
+          
       <div className="input-group-prepend" >
         <span className="input-group-text" id="inputGroup-sizing-default" >{label}</span>
       </div>

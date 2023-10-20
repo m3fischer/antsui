@@ -33,7 +33,16 @@ export default  function addEntryPilzentwicklung () {
             <p>Trage hier die tägliche Beobachtung ein</p>
             
            <form key="Add_Pilzentwicklung" onSubmit={onSendData} className="d-grid gap-5">
-                {p13g.questions.map(item => {return <AntItem key={item.id} id={item.id} label={item.label} htmltype={item.htmltype} value={item.initvalue}></AntItem>})}
+                {p13g.questions.map(item => {
+                    return <AntItem 
+                                key={item.id} 
+                                id={item.id} 
+                                label={item.label}
+                                htmltype={item.htmltype} 
+                                value={item.initvalue}
+                                img = {item.image} >
+
+                            </AntItem>})}
                 <button variant="contained" type="submit" className="btn btn-primary">Absenden</button>            
             </form>
 
