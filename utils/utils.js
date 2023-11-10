@@ -100,6 +100,7 @@ const Utils = {
       return curTime
     },
 
+
     send_data_to_backend: async function (data, endpoint = '/api/addentry'){
       // Send the data to the server in JSON format.
       const JSONdata = JSON.stringify(data)

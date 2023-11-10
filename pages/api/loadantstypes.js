@@ -1,6 +1,11 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 
+/**
+ * Liefert die Antstype zum Aufbau der Formulare im Frontend
+ * @param {*} req 
+ * @param {*} res 
+ */
 export default async function handler(req, res) {
   //Den absoluten Pfad bestimmen (cwd => current working directory)
   const jsonDirectory = path.join(process.cwd(), 'components');
